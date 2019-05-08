@@ -1,3 +1,7 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body{
     margin: 0;
     background-color: black;
@@ -66,4 +70,9 @@ header{
 
 #nome{
     font-size: 32px;
+}
+
+.component{
+    position: absolute;
+    -webkit-user-select: none;
 }

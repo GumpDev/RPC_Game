@@ -9,10 +9,10 @@ function init(){
     document.getElementById("nome").innerText = nome;
     document.getElementById("atribsPoints").innerText = atribPoints;
     setInterval(() => {
-        //Gold.add(1);
+        Gold.add(1);
     }, 1000);
     setInterval(() => {
-        //Xp.Add(1);
+        Xp.Add(1);
     }, 10000);
 }
 
@@ -28,11 +28,11 @@ var Gold = {
 }
 
 var Atributos = {
-    ata : ata = 0,
-    def : def = 0,
-    vel : vel = 0,
-    sor : sor = 0,
-    int : int = 0,
+    ata : ata = 1,
+    def : def = 1,
+    vel : vel = 1,
+    sor : sor = 1,
+    int : int = 1,
     addPoints : function(quant){
         atribPoints += quant;
         document.getElementById("atribsPoints").innerText = atribPoints;
@@ -105,4 +105,3 @@ var Xp = {
         }
     }
 }
-
