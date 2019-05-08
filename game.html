@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
+    <script src="assets/main.js"></script>
+</head>
+<body onload="init()">
+    <header>
+        <table style="width: 98%">
+            <tr style="width: 100%">
+                    <td align="left" style="width: 40%">
+                            <table id="atribs">
+                                <tr>
+                                    <th colspan="5">Atributos</th> 
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="tooltip">Ata
+                                            <span class="tooltiptext">Ataque</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tooltip">Def
+                                            <span class="tooltiptext">Defesa</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tooltip">Vel
+                                            <span class="tooltiptext">Velocidade</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tooltip">Sor
+                                            <span class="tooltiptext">Sorte</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tooltip">Int
+                                            <span class="tooltiptext">Inteligência</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="ata" onclick="Atributos.addAtribs(0);">0</td>
+                                    <td id="def" onclick="Atributos.addAtribs(1);">0</td>
+                                    <td id="vel" onclick="Atributos.addAtribs(2);">0</td>
+                                    <td id="sor" onclick="Atributos.addAtribs(3);">0</td>
+                                    <td id="int" onclick="Atributos.addAtribs(4);">0</td>
+                                </tr>
+                            </table>
+                        </td>
+                <td style="width: 40%" align="left">
+                    <span id="nome">(nome)</span><br>
+                    Pontos de Atributo: <span id="atribsPoints">0</span>
+                </td>
+                <td align="center"  style="width: 10%">
+                </td>
+                <td align="center" style="width: 10%">
+                    <div id="level">
+                        Level <span id="lv">1</span><br>
+                        |<span id="xp">██████████</span>|
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </header>
+</body>
+</html>
