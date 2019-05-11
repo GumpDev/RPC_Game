@@ -1,3 +1,4 @@
 Responsividade no Game.html
+Fazer Inventario
 Fazer o Mapa no Game.html
 Fazer fight no Game.html
