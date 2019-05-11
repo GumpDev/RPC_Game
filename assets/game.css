@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+table{
+    height: 75px;
+}
+
+header{
+    position: fixed;
+    background: #555555;
+    background: -moz-linear-gradient(top, #555555 0%, #333333 100%);
+    background: -webkit-linear-gradient(top, #555555 0%,#333333 100%);
+    background: linear-gradient(to bottom, #555555 0%,#333333 100%);
+    width: 100%;
+    padding: 8px 16px;
+    z-index: 5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#level{
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+#goldExib{
+    font-weight: lighter;
+    font-size: 18px;
+    color: gold;
+}
+
+#ata,#def,#int,#sor,#vel{
+    cursor: pointer;
+    text-align: center;
+    -webkit-user-select: none
+}
+
+#atribs th{
+    background-color: #666;
+}
+#atribs td{
+    padding: 2px 2px;
+    background-color: #555;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-right: 150px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+#nome{
+    font-size: 32px;
+}
+
+.component{
+    position: absolute;
+    -webkit-user-select: none;
+}
+
+#btn a{
+    position: fixed;
+    background-color: #222;
+    filter: drop-shadow(5px 5px 5px #111); 
+    padding: 8px 6px;
+    z-index: 4;
+    margin-top: 101px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#btn a:hover{
+    background-color: #252525;
+}
+
+#btn a.active{
+    position: fixed;
+    background-color: #333;
+    filter: drop-shadow(5px 5px 5px #111); 
+    padding: 8px 6px;
+    z-index: 5;
+    margin-top: 101px;
+}
