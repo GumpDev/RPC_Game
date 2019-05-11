@@ -105,3 +105,21 @@ var Xp = {
         }
     }
 }
+
+var Tab = {
+    open : function (t){
+        if(t == 0){
+            f("#tab1").style.display = "block";
+            f("#tab2").style.display = "none";
+            f("#btn_tab1").className = "active";
+            f("#btn_tab2").className = "";
+            f("#tab1").style.width = "98%";
+        }else{
+            f("#tab1").style.display = "none";
+            f("#tab2").style.display = "block";
+            f("#btn_tab1").className = "";
+            f("#btn_tab2").className = "active";
+            f("#tab2").style.width = "98%";
+        }
+    }
+}

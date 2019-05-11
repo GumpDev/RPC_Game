@@ -1,7 +1,3 @@
-*{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 body{
     margin: 0;
     background-color: black;
@@ -9,11 +5,16 @@ body{
     overflow: hidden;
 }
 
+table{
+    height: 75px;
+}
+
 header{
     position: fixed;
     background-color: #333; 
     width: 100%;
     padding: 8px 16px;
+    z-index: 5;
 }
 
 #level{
@@ -75,4 +76,27 @@ header{
 .component{
     position: absolute;
     -webkit-user-select: none;
+}
+
+#btn a{
+    position: fixed;
+    background-color: #222;
+    filter: drop-shadow(5px 5px 5px #111); 
+    padding: 8px 6px;
+    z-index: 5;
+    margin-top: 93px;
+    cursor: pointer;
+}
+
+#btn a:hover{
+    background-color: #252525;
+}
+
+#btn a.active{
+    position: fixed;
+    background-color: #333;
+    filter: drop-shadow(5px 5px 5px #111); 
+    padding: 8px 6px;
+    z-index: 5;
+    margin-top: 93px;
 }

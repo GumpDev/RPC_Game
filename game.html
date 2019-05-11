@@ -8,71 +8,109 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="assets/main.js"></script>
-    <script src="assets/jquery.js"></script>
+    <script src="assets/f.js"></script>
 </head>
 <body onload="init()">
     <header>
-        <table style="width: 98%">
-            <tr style="width: 100%">
-                    <td align="left" style="width: 40%">
-                            <table id="atribs">
-                                <tr>
-                                    <th colspan="5">Atributos</th> 
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="tooltip">Ata
-                                            <span class="tooltiptext">Ataque</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="tooltip">Def
-                                            <span class="tooltiptext">Defesa</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="tooltip">Vel
-                                            <span class="tooltiptext">Velocidade</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="tooltip">Sor
-                                            <span class="tooltiptext">Sorte</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="tooltip">Int
-                                            <span class="tooltiptext">Inteligência</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td id="ata" onclick="Atributos.addAtribs(0);">0</td>
-                                    <td id="def" onclick="Atributos.addAtribs(1);">0</td>
-                                    <td id="vel" onclick="Atributos.addAtribs(2);">0</td>
-                                    <td id="sor" onclick="Atributos.addAtribs(3);">0</td>
-                                    <td id="int" onclick="Atributos.addAtribs(4);">0</td>
-                                </tr>
-                            </table>
-                        </td>
-                <td style="width: 40%" align="left">
-                    <span id="nome">(nome)</span><br>
-                    Pontos de Atributo: <span id="atribsPoints">0</span>
-                </td>
-                <td align="center"  style="width: 10%">
-                    <span id="goldExib">Moedas: </span><span id="gold">0g</span>
-                </td>
-                <td align="center" style="width: 10%">
-                    <div id="level">
-                        Level <span id="lv">1</span><br>
-                        |<span id="xp">██████████</span>|
-                    </div>
-                </td>
-            </tr>
-        </table>
+        <div style=" display:block" id="tab1">
+            <table style="width: 98%" id="tab1">
+                <tr style="width: 100%">
+                        <td align="left" style="width: 40%">
+                                <table id="atribs">
+                                    <tr>
+                                        <th colspan="5">Atributos</th> 
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="tooltip">Ata
+                                                <span class="tooltiptext">Ataque</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tooltip">Def
+                                                <span class="tooltiptext">Defesa</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tooltip">Vel
+                                                <span class="tooltiptext">Velocidade</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tooltip">Sor
+                                                <span class="tooltiptext">Sorte</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tooltip">Int
+                                                <span class="tooltiptext">Inteligência</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="ata" onclick="Atributos.addAtribs(0);">0</td>
+                                        <td id="def" onclick="Atributos.addAtribs(1);">0</td>
+                                        <td id="vel" onclick="Atributos.addAtribs(2);">0</td>
+                                        <td id="sor" onclick="Atributos.addAtribs(3);">0</td>
+                                        <td id="int" onclick="Atributos.addAtribs(4);">0</td>
+                                    </tr>
+                                </table>
+                            </td>
+                    <td style="width: 40%" align="left">
+                        <span id="nome">(nome)</span><br>
+                        Pontos de Atributo: <span id="atribsPoints">0</span>
+                    </td>
+                    <td align="center"  style="width: 10%">
+                        <span id="goldExib">Moedas: </span><span id="gold">0g</span>
+                    </td>
+                    <td align="center" style="width: 10%">
+                        <div id="level">
+                            Level <span id="lv">1</span><br>
+                            |<span id="xp">██████████</span>|
+                        </div>  
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style=" display:none" id="tab2">
+            <table style="width: 98%;" id="tab2">
+                <tr>
+                    <td>asdasdsad</td>
+                </tr>
+            </table>
+        </div>
     </header>
-    <div id="main" style="width:100%">
+    <div id="btn">
+        <a id="btn_tab1" class="active" onclick="Tab.open(0)">Ficha do Personagem</a>
+        <a id="btn_tab2" style="margin-left: 170px" onclick="Tab.open(1)">Inventario</a>
+    </div>
 
+    <div id="map">
+    <pre class="component" style="margin: 100px 500px; cursor: pointer;">
+           _________________________________________________________________________________________________________________
+          /                                                                                                                /|
+         /                                                                                                                / |
+        /________________________________________________________________________________________________________________/  |
+        |||===========================================================================================================|||   |
+        |||             |  |        |                                                      |  |          |            |||   |
+        |||             |  |        |                                                      |  |          |            |||   |
+        |||-------------|  |--------|                                                      |  |----------|------------|||   |
+        |||    |   |    |  |--------|                                                      |  |----------|    |   |   |||   |
+        |||    |   |    |  |        |                                                      |  |          |    |   |   |||   |
+        |||    |   |    |  |        |            /                            /            |  |          |    |   |   |||   |
+        |||    |   |    |  |        |           /                            / /           |  |          |    |   |   |||   |
+        |||-------------|  |        |          /____________________________/ /            |  |          |------------|||   |
+        |||             |  |--------|          |____________________________|/             |  |----------|            |||   |
+        |||             |  |--------|          ||       _____________      ||              |  |----------|            |||   |
+        |||             |  |        |          ||     _/             \_    ||              |  |          |            |||   |
+        |||             |  |        |          ||     |               |    ||              |  |          |            |||   |
+        |||             |  |________|          ||     |               |    ||              |  |__________|            |||  /
+        |||             | /         |          ||     |               |    ||              | /           |            ||| /
+        |||_____________|/          |__________||_____|               |____||______________|/            |____________|||/
+                                               ||                          ||
+                                               ||                          ||
+                                               ||                          ||                                  
+        </pre>
     </div>
 </body>
 </html>
