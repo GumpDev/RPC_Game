@@ -1,34 +1,3 @@
-HTML
-- site com pelo menos 2 páginas - All
-- formatação textual – Index.html
-- pelo menos:
-	- 1 link - Index.html 
-	- 1 âncora - Index.html
-	- 1 lista - Index.html
-
-- formulário para cadastro ou contato - Index.html
-
-- escolher entre pelo menos:
-  - 1 imagem - index.html
-  - 1 vídeo
-  - 1 som - game.html
-
-- favicon - All
-
-CSS
-
-- Formatação textual: ao menos 3 propriedades diferentes - 1
-- Pseudo-classes - Game.html
-- Formatação das listas - index.html
-- Uso e formatação de DIV´s (tamanhos, posicionamento, bordas, fundo, margens) - index.html
-- 1 animação/transição - game.html e index.html
-- formatação do formulário - index.html
-
-RESPONSIVIDADE - index.html e game.html no Header
-Nessas páginas, utilizar recursos como:
-    • Viewport
-    • %
-    • Media queries (para 2 breakpoints pelo menos)
-        ◦ Utilizar ao menos 2 formatações CSS 
-    • Ao menos um Media Type (além de screen) – print por ex
-Lembre-se: site miniaturizado não é site responsivo
+Responsividade no Game.html
+Fazer o Mapa no Game.html
+Fazer fight no Game.html
