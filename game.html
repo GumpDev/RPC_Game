@@ -15,80 +15,94 @@
 <body onload="init()">
     <header>
         <div style=" display:block" id="tab1">
-            <table style="width: 98%" id="tab1">
+            <table style="width: 98%">
                 <tr style="width: 100%">
-                        <td align="left" style="width: 40%">
-                                <table id="atribs">
-                                    <tr>
-                                        <th colspan="5">Atributos</th> 
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="tooltip">Ata
-                                                <span class="tooltiptext">Ataque</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tooltip">Def
-                                                <span class="tooltiptext">Defesa</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tooltip">Vel
-                                                <span class="tooltiptext">Velocidade</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tooltip">Sor
-                                                <span class="tooltiptext">Sorte</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tooltip">Int
-                                                <span class="tooltiptext">Inteligência</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td id="ata" onclick="Atributos.addAtribs(0);">1</td>
-                                        <td id="def" onclick="Atributos.addAtribs(1);">1</td>
-                                        <td id="vel" onclick="Atributos.addAtribs(2);">1</td>
-                                        <td id="sor" onclick="Atributos.addAtribs(3);">1</td>
-                                        <td id="int" onclick="Atributos.addAtribs(4);">1</td>
-                                    </tr>
-                                </table>
-                            </td>
-                    <td style="width: 40%" align="left">
-                        <span id="nome">(nome)</span><br>
-                        Pontos de Atributo: <span id="atribsPoints">0</span>
+                    <td align="left" style="width: 40%" id="atribsComp">
+                            <table id="atribs">
+                                <tr>
+                                    <th colspan="5">Atributos</th> 
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="tooltip">Ata
+                                            <span class="tooltiptext">Ataque</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tooltip">Def
+                                            <span class="tooltiptext">Defesa</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tooltip">Vel
+                                            <span class="tooltiptext">Velocidade</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tooltip">Sor
+                                            <span class="tooltiptext">Sorte</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tooltip">Int
+                                            <span class="tooltiptext">Inteligência</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="ata" onclick="Atributos.addAtribs(0);">1</td>
+                                    <td id="def" onclick="Atributos.addAtribs(1);">1</td>
+                                    <td id="vel" onclick="Atributos.addAtribs(2);">1</td>
+                                    <td id="sor" onclick="Atributos.addAtribs(3);">1</td>
+                                    <td id="int" onclick="Atributos.addAtribs(4);">1</td>
+                                </tr>
+                            </table>
                     </td>
-                    <td align="center"  style="width: 10%">
+                    <td style="width: 40%" align="left" id="info">
+                        <span id="nome">(nome)</span><br>
+                        Pontos: <span id="atribsPoints">0</span>
+                    </td>
+                    <td align="center" id="moedas">
                         <span id="goldExib">Moedas: </span><span id="gold">0g</span>
                     </td>
-                    <td align="center" style="width: 10%">
-                        <div id="level">
+                    <td align="center" id="levelComp">
+                        <div id="level"><br>
                             Level <span id="lv">1</span><br>
-                            |<span id="xp">██████████</span>|
+                            |<span id="xp">██████████</span>|<br><br>
                         </div>  
                     </td>
                 </tr>
             </table>
         </div>
         <div style=" display:none" id="tab2">
-            <table style="width: 98%;" id="tab2">
+            <table style="width: 98%;" id="inv">
                 <tr>
-                    <td>asdasdsad</td>
+                    <td align="center" id="slot0" style="width: 10%;cursor: pointer;"><br></td>
+                    <td align="center" id="slot1" style="width: 10%;cursor: pointer;"><br></td>
+                    <td align="center" id="slot2" style="width: 10%;cursor: pointer;"><br></td>
+                    <td align="center" id="slot3" style="width: 10%;cursor: pointer;"><br></td>
+                    <td align="center" id="slot4" style="width: 10%;cursor: pointer;"><br></td>
+                    <td align="center" id="slot5" style="width: 10%;cursor: pointer;"><br></td>
+                    <td align="center" id="slot6" style="width: 10%;cursor: pointer;"><br></td>
+                    <td align="center" id="slot7" style="width: 10%;cursor: pointer;"><br></td>
+                    <td align="center" id="slot8" style="width: 10%;cursor: pointer;"><br></td>
                 </tr>
             </table>
         </div>
     </header>
     <div id="btn">
         <a id="btn_tab1" class="active" onclick="Tab.open(0)">Ficha do Personagem</a>
-        <a id="btn_tab2" style="margin-left: 170px" onclick="Tab.open(1)">Inventario</a>
+        <a id="btn_tab2" style="margin-left: 210px" onclick="Tab.open(1)">Inventario</a>
     </div>
 
-    <div id="map">
-    <pre class="component" style="margin: 100px 500px; cursor: pointer;">
+    <div id="control">
+         <span style="margin-left: 26px;padding: 5px 8px" onmousedown="Control.walk(0,-1);">↑</span><br>
+         <span  onmousedown="Control.walk(-1,0);">←</span><span style="margin-left: 15px"  onmousedown="Control.walk(1,0);">→</span><br>
+         <span style="margin-left: 26px;padding: 5px 8px" onmousedown="Control.walk(0,1);">↓</span>
+    </div>
+
+<div id="map">      
+    <pre class="component" id="cotil" style="margin: 100px 500px; cursor: pointer;">
            _________________________________________________________________________________________________________________
           /                                                                                                                /|
          /                                                                                                                / |
@@ -99,7 +113,7 @@
         |||-------------|  |--------|                                                      |  |----------|------------|||   |
         |||    |   |    |  |--------|                                                      |  |----------|    |   |   |||   |
         |||    |   |    |  |        |                                                      |  |          |    |   |   |||   |
-        |||    |   |    |  |        |            /                            /            |  |          |    |   |   |||   |
+        |||    |   |    |  |        |            /          COTIL             /            |  |          |    |   |   |||   |
         |||    |   |    |  |        |           /                            / /           |  |          |    |   |   |||   |
         |||-------------|  |        |          /____________________________/ /            |  |          |------------|||   |
         |||             |  |--------|          |____________________________|/             |  |----------|            |||   |
@@ -113,6 +127,21 @@
                                                ||                          ||
                                                ||                          ||                                  
         </pre>
+    <pre class="component" id="secretaria" style="margin: 650px 600px; cursor: pointer;">
+          _______________________________________________________________________________________
+         /                                                                                      /|
+        /______________________________________________________________________________________/ |
+        ||| |        ||| |        ||| |                            ||| |        ||| |        ||| |
+        ||| |        ||| |        ||| |                            ||| |        ||| |        ||| |
+        ||| |________||| |________||| |                            ||| |________||| |________||| |
+        ||| |________||| |________||| |        SECRETARIA          ||| |________||| |________||| |
+        ||| |        ||| |        ||| |       _____________        ||| |        ||| |        ||| |
+        ||| |        ||| |        ||| |      /             \       ||| |        ||| |        ||| |
+        ||| |        ||| |        ||| |     /               \      ||| |        ||| |        ||| |
+        ||| |        ||| |        ||| |     |               |      ||| |        ||| |        ||| |
+        ||| |        ||| |        ||| |     |               |      ||| |        ||| |        ||| |
+        ||| |________||| |________||| |_____|               |______||| |________||| |________||| /
+        |||/         |||/         |||/                             |||/         |||/         |||/
     </div>
 </body>
 </html>
