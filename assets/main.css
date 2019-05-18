@@ -2,7 +2,6 @@ body{
     margin: 0;
     background-color: black;
     color: white;
-    overflow: hidden;
 }
 
 table{
@@ -72,7 +71,6 @@ header{
 #nome{
     font-size: 32px;
 }
-
 .component{
     position: absolute;
     -webkit-user-select: none;
@@ -100,3 +98,23 @@ header{
     z-index: 5;
     margin-top: 93px;
 }
+
+.pre{
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1000px) {
+    #tab1 {
+        width:90%;
+    }
+    #tab2{
+        overflow-x: scroll;
+    }
+    #btn_tab2 {
+        display: none;
+    }
+    .pre{
+        font-size: 8px;
+    }
+}
+
